@@ -49,26 +49,26 @@
     
 }
 
-- (void)handleButtonClicked:(id)sender {
-    UIButton *button = (UIButton *)sender;
-    if (button.isSelected) {
-        button.selected = NO;
-        self.label.text = @"";
-    } else {
-        button.selected = YES;
-        self.label.text = @"Hello World!!! Amber AppTeam";
-    }
-}
-
-//- (void)handleButtonClicked:(UIButton *)sender {
-//    if (sender.isSelected) {
-//        sender.selected = NO;
-//        self.label.text = @"請點擊下方按鈕";
+//- (void)handleButtonClicked:(id)sender {
+//    UIButton *button = (UIButton *)sender;
+//    if (button.isSelected) {
+//        button.selected = NO;
+//        self.label.text = @"";
 //    } else {
-//        sender.selected = YES;
+//        button.selected = YES;
 //        self.label.text = @"Hello World!!! Amber AppTeam";
 //    }
 //}
+
+- (void)handleButtonClicked:(UIButton *)sender {
+    if (sender.isSelected) {
+        sender.selected = NO;
+        self.label.text = @"請點擊下方按鈕";
+    } else {
+        sender.selected = YES;
+        self.label.text = @"Hello World!!! Amber AppTeam";
+    }
+}
 
 
 @end
