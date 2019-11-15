@@ -53,7 +53,7 @@
     UIButton *button = (UIButton *)sender;
     if (button.isSelected) {
         button.selected = NO;
-        self.label.text = @"請點擊下方按鈕";
+        self.label.text = @"";
     } else {
         button.selected = YES;
         self.label.text = @"Hello World!!! Amber AppTeam";
