@@ -8,8 +8,14 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () {
+    NSString *firstName;
+}
+@property (nonatomic, copy) NSString *lastName;
 @property (nonatomic, strong) UILabel *label;
+
+- (NSString *)firstName;
+- (void)setFirstName:(NSString *)name;
 
 @end
 
@@ -20,6 +26,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSLog(@"ViewController:viewDidLoad");
+    //[self setFirstName:@"Jason"];
+    //self.lastName = @"Lee";
+    //NSLog(@"%@ %@", firstName, self.lastName);
+    
     //UILabel *label = [[UILabel alloc] init];
     //[label setFrame:CGRectMake(0, 0, 400, 100)];
     CGFloat viewWidth = self.view.frame.size.width;
@@ -59,6 +69,13 @@
 //        self.label.text = @"Hello World!!! Amber AppTeam";
 //    }
 //}
+- (NSString *)firstName {
+    return firstName;
+}
+
+- (void)setFirstName:(NSString *)name {
+    firstName = name;
+}
 
 - (void)handleButtonClicked:(UIButton *)sender {
     if (sender.isSelected) {
